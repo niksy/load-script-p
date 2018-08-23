@@ -1,6 +1,6 @@
 # load-script-p
 
-[![Build Status][ci-img]][ci]
+[![Build Status][ci-img]][ci] [![BrowserStack Status][browserstack-img]][browserstack]
 
 Load script as promise.
 
@@ -49,3 +49,5 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.com/niksy/load-script-p
 [ci-img]: https://travis-ci.com/niksy/load-script-p.svg?branch=master
+[browserstack]: https://www.browserstack.com/
+[browserstack-img]: https://www.browserstack.com/automate/badge.svg?badge_key=L1MyUkUwQ1hZYmxXRk91OHlYQU4zVFp4bGg3ZDhrT0pwSk1ZNWs5TkV5QT0tLVMwdmNLWktIVkxJKy85N0Z6RHI5dUE9PQ==--a978df4f98d96289177f14f0341fa98be8ee16a4

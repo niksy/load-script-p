@@ -19,13 +19,43 @@ if ( local ) {
 	};
 } else {
 	config = {
-		customLaunchers: {
-			'Chrome-CI': {
-				base: 'Chrome',
-				flags: ['--no-sandbox']
-			}
+		browserStack: {
+			startTunnel: true,
+			project: 'load-script-p',
+			name: 'Automated (Karma)',
+			build: 'Automated (Karma)'
 		},
-		browsers: [(process.env.TRAVIS ? 'Chrome-CI' : 'Chrome')]
+		customLaunchers: {
+			'BS-Chrome': {
+				base: 'BrowserStack',
+				browser: 'Chrome',
+				os: 'Windows',
+				'os_version': '7',
+				project: 'load-script-p',
+				build: 'Automated (Karma)',
+				name: 'Chrome'
+			},
+			'BS-Firefox': {
+				base: 'BrowserStack',
+				browser: 'Firefox',
+				os: 'Windows',
+				'os_version': '7',
+				project: 'load-script-p',
+				build: 'Automated (Karma)',
+				name: 'Firefox'
+			},
+			'BS-IE9': {
+				base: 'BrowserStack',
+				browser: 'IE',
+				'browser_version': '9',
+				os: 'Windows',
+				'os_version': '7',
+				project: 'load-script-p',
+				build: 'Automated (Karma)',
+				name: 'IE9'
+			},
+		},
+		browsers: ['BS-Chrome', 'BS-Firefox', 'BS-IE9']
 	};
 }
 
