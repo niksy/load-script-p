@@ -1,0 +1,17 @@
+{
+	"presets": [
+		"niksy/next",
+		["niksy", {
+			"targets": {
+				"node": "8",
+				"browsers": [
+					"last 2 versions",
+					"ie >= 9"
+				]
+			}
+		}]
+	],
+	"plugins": [
+		"transform-object-assign"
+	]
+}

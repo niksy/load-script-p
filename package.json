@@ -1,0 +1,78 @@
+{
+  "name": "load-script-p",
+  "version": "0.0.0",
+  "description": "Load script as promise.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
+  "license": "MIT",
+  "files": [
+    "dist/index.cjs.js",
+    "dist/index.esm.js",
+    "dist/",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "rollup --config .rollup.js",
+    "lint": "eslint '{index,lib/**/*,test/**/*}.js'",
+    "prepublish": "npm run build",
+    "release": "np",
+    "test": "npm run lint && npm run test:automated",
+    "test:automated": "karma start",
+    "test:automated:local": "karma start --local",
+    "test:automated:local:watch": "npm run test:automated:local -- --auto-watch --no-single-run"
+  },
+  "dependencies": {
+    "little-loader": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-niksy": "^3.4.1",
+    "eslint": "^5.4.0",
+    "eslint-config-niksy": "^6.1.0",
+    "eslint-plugin-extend": "^0.1.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-mocha": "^5.1.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-unicorn": "^5.0.0",
+    "esm": "^3.0.51",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-html2js-preprocessor": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^3.0.0",
+    "minimist": "^1.2.0",
+    "mocha": "^4.1.0",
+    "np": "^3.0.4",
+    "rollup": "^0.60.1",
+    "rollup-plugin-babel": "^3.0.4",
+    "webpack": "^4.12.0"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "load",
+    "promise",
+    "script"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/load-script-p.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/load-script-p/issues"
+  },
+  "homepage": "https://github.com/niksy/load-script-p#readme"
+}
